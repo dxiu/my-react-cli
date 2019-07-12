@@ -1,0 +1,9 @@
+.news_wrap{
+  display: flex;
+}
+.left_nav{
+  padding: 10px;
+}
+.wrap{
+  padding: 10px;
+}

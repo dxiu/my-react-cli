@@ -1,30 +1,41 @@
 import React from 'react';
+import '../style/head.css';
 import {
   BrowserRouter,
   Route,
   NavLink,
   Switch
 } from 'react-router-dom'
-import News from './news.jsx'
-import Home from './home'
-import Not from './404'
+import routes from '../router/index'
+
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>这个是主页面</h1>
-        <ul>
-          <li>
-            <NavLink to="/" exact>首页</NavLink>
+        <ul className="top_nav">
+          <li className="item_nav">
+            <NavLink to="/" exact activeClassName="active_nav">首页</NavLink>
           </li>
-          <li>
-            <NavLink to="/news">新闻</NavLink>
+          <li className="item_nav">
+            <NavLink to="/news" activeClassName="active_nav">新闻</NavLink>
+          </li>
+          <li className="item_nav">
+            <NavLink to="/about" activeClassName="active_nav">关于我们</NavLink>
           </li>
         </ul>
         <Switch>
-          <Route path="/" exact component={Home}></Route>
-          <Route path="/news" component={News}></Route>
-          <Route component={Not}></Route>
+        {/* <Route path={routes[1].path} exact={routes[1].exact} component={routes[1].component}></Route> */}
+          {
+            routes.map((item,index) => {
+              if(item.exact) {
+                return <Route path={item.path} exact={item.exact} component={item.component} key={index}></Route>
+              
+              } else {
+                return <Route path={item.path} component={item.component} key={index}></Route>
+                
+              }
+            })
+          }
         </Switch>
       </div>
     </BrowserRouter>

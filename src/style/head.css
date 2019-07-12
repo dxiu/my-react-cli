@@ -1,0 +1,16 @@
+.top_nav{
+  display: flex;
+  color: rgba(255,255,255,0.8);
+  justify-content: space-around;
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(0,100,210,0.9);
+}
+.item_nav a{
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.active_nav{
+  color: #fff;
+}

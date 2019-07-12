@@ -1,5 +1,14 @@
+html,body{
+  margin: 0;
+  padding: 0;
+}
 ul,li{
   list-style: none;
   margin: 0;
   padding: 0;
+}
+a{
+  display: inline-block;
+  color: unset;
+  text-decoration: none;
 }
