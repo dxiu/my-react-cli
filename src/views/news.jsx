@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom'
 export default class News extends Component{
   render(){
+    console.log('news========')
     return(
       <div className="news_wrap">
         <ul>

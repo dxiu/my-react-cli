@@ -4,7 +4,7 @@ import Not from '../views/404.jsx'
 const router = [
   {
     path: '/',
-    exac: true,
+    exact: true,
     component:  Home
   },
   {
