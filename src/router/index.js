@@ -1,6 +1,7 @@
 import Home from '../views/home.jsx'
 import News from '../views/news.jsx'
 import Not from '../views/404.jsx'
+import newsDetail from '../views/newsDetail'
 const router = [
   {
     path: '/',
@@ -9,7 +10,13 @@ const router = [
   },
   {
     path: '/news',
-    component: News
+    component: News,
+    children: [
+      {
+        path: '/news/newsDetail/:id',
+        component: newsDetail
+      }
+    ]
   },
   {
     path: '*',

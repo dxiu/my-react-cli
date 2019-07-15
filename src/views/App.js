@@ -58,10 +58,11 @@ class App extends Component{
                   </Route>
                 } else {
                   return <Route path={item.path}
-                  component={item.component}
+                  render={(props) => {
+                    return <item.component data={item.children}/>
+                  }}
                   key={index}>
                   </Route>
-                  
                 }
               })
             }
