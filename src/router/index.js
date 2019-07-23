@@ -13,7 +13,7 @@ const router = [
     component: News,
     children: [
       {
-        path: 'newsDetail/:id',
+        path: '/newsDetail/:id',
         component: newsDetail
       }
     ]

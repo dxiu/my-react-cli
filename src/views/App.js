@@ -6,8 +6,9 @@ import {
   Route,
   NavLink
 } from 'react-router-dom'
+// import * as ReactRouterDom from 'react-router-dom'
 import routes from '../router/index'
-
+// console.log(ReactRouterDom)
 class App extends Component{
   state={
     navArr: []
@@ -39,7 +40,11 @@ class App extends Component{
           {
             this.state.navArr.map((item,index)=>{
               return (
-                <NavLink className="item_nav" key={index} to={item.to}>
+                <NavLink className="item_nav"
+                key={index}
+                to={item.to}
+                exact
+                activeClassName="active_nav">
                   {item.con}
                 </NavLink>
               )

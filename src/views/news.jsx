@@ -42,7 +42,11 @@ export default class News extends Component{
               {
                 this.props.data && this.props.data.map((item,index) => {
                   return (
-                    <Route path={item.path} component={item.component} key={index}></Route>
+                    <Route
+                      path={item.path}
+                      component={item.component}
+                      key={index}>
+                    </Route>
                   )
                 })
               }
