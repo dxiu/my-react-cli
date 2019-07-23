@@ -18,7 +18,7 @@ class App extends Component{
       {
         to:'/',
         con:'首页'
-    },
+      },
       {
           to:'/user',
           con:'用户中心'

@@ -1,5 +1,6 @@
 import Home from '../views/home.jsx'
 import News from '../views/news.jsx'
+import User from '../views/user.jsx'
 import Not from '../views/404.jsx'
 import newsDetail from '../views/newsDetail'
 const router = [
@@ -7,6 +8,11 @@ const router = [
     path: '/',
     exact: true,
     component:  Home
+  },
+  {
+    path: '/user',
+    exact: true,
+    component:  User
   },
   {
     path: '/news',
