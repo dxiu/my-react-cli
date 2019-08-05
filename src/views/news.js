@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import newsDetail from './newsDetail'
 import '../style/news.css'
 import {
   BrowserRouter,

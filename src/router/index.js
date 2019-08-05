@@ -1,9 +1,16 @@
-import Home from '../views/home.jsx'
-import News from '../views/news.jsx'
-import User from '../views/user.jsx'
-import Not from '../views/404.jsx'
-import newsDetail from '../views/newsDetail'
-const router = [
+
+import React, { Component } from 'react'
+import {
+  Switch,
+  Route
+} from 'react-router-dom'
+
+import Home from '../views/home.js'
+import News from '../views/news.js'
+import User from '../views/user.js'
+import Not from '../views/404.js'
+import NewsDetail from '../views/newsDetail.js'
+const routes = [
   {
     path: '/',
     exact: true,
@@ -20,7 +27,7 @@ const router = [
     children: [
       {
         path: '/newsDetail/:id',
-        component: newsDetail
+        component: NewsDetail
       }
     ]
   },
@@ -29,4 +36,33 @@ const router = [
     component: Not
   }
 ]
-export default router
+export default class RouterIndex extends Component{
+  render(){
+
+    return(
+      <div>
+        <Switch>
+        {
+            routes.map((item,index) => {
+              if(item.exact) {
+                return <Route 
+                  path={item.path} 
+                  exact 
+                  component={item.component} key={index}>
+                </Route>
+              } else {
+                return <Route path={item.path}
+                  // 有子路由
+                  render={(props) => {
+                    return <item.component data={item.children}/>
+                  }}
+                  key={index}>
+                </Route>
+              }
+            })
+          }
+        </Switch>
+      </div>
+    )
+  }
+}

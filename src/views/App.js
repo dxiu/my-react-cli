@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import '../style/head.css';
 import {
-  BrowserRouter,
-  Switch,
-  Route,
   NavLink
 } from 'react-router-dom'
-// import * as ReactRouterDom from 'react-router-dom'
-import routes from '../router/index'
-// console.log(ReactRouterDom)
+import RouterIndex from '../router/index';
 class App extends Component{
-  state={
-    navArr: []
+  constructor(arg) {
+    super(arg)
+    this.state={
+      navArr: []
+    }
   }
   componentDidMount() {
     const arr = [
@@ -34,9 +32,8 @@ class App extends Component{
   }
   render(){
     return (
-      <BrowserRouter>
-        <div className="App">
-          <div className="top_nav">
+      <div className="App">
+        <div className="top_nav">
           {
             this.state.navArr.map((item,index)=>{
               return (
@@ -49,33 +46,11 @@ class App extends Component{
                 </NavLink>
               )
             })
-          }
-            
-           </div>
-          <Switch>
-            {
-              routes.map((item,index) => {
-                if(item.exact) {
-                  return <Route 
-                  path={item.path} 
-                  exact 
-                  component={item.component} key={index}>
-                  </Route>
-                } else {
-                  return <Route path={item.path}
-                  render={(props) => {
-                    return <item.component data={item.children}/>
-                  }}
-                  key={index}>
-                  </Route>
-                }
-              })
-            }
-          </Switch>
+          } 
         </div>
-      </BrowserRouter>
+        <RouterIndex/>
+      </div>
     )
   }
 }
-
-export default App;
+export default App
