@@ -2,10 +2,9 @@ import React, { Component } from 'react'
 import '../style/news.css'
 import {
   BrowserRouter,
-  Route,
-  NavLink,
-  Switch
+  NavLink
 } from 'react-router-dom'
+import NewsRouter from '../router/news'
 export default class News extends Component{
   render(){
     const arr = [
@@ -36,21 +35,7 @@ export default class News extends Component{
               })
             }
           </ul>
-          <div>
-            <Switch>
-              {
-                this.props.data && this.props.data.map((item,index) => {
-                  return (
-                    <Route
-                      path={item.path}
-                      component={item.component}
-                      key={index}>
-                    </Route>
-                  )
-                })
-              }
-            </Switch>
-          </div>
+          <NewsRouter/>
         </div>
       </BrowserRouter>
     )
