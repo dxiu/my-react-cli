@@ -7,3 +7,11 @@ export function getPesonData (phoneNumOrOpenid) {
     proxy: '/api'
   })
 }
+export function upload (data) {
+  return service({
+    url: `/format/batch/upload_image`,
+    method: 'post',
+    data,
+    proxy: '/base'
+  })
+}

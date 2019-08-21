@@ -5,6 +5,33 @@ class NewDetail extends Component{
     super(arg)
     this.state={}
   }
+  componentWillMount() {}
+  componentDidMount() {
+    setTimeout(() => {
+      this.props.dispatch(action => {
+        action({
+          type: 'update_detail',
+          data: 'update_detail更新了'
+        })
+      })
+    }, 3000)
+  }
+  shouldComponentUpdate() {
+    console.log('shouldComponentUpdate')
+    return true
+  }
+  componentWillUpdate() {
+    console.log('componentWillUpdate')
+  }
+  componentDidUpdate() {
+    console.log('componentDidUpdate')
+  }
+  componentWillReceiveProps() {
+    console.log('componentWillReceiveProps')
+  }
+  componentWillUnmount() {
+    console.log('componentWillUnmount')
+  }
   render() {
     const params = this.props.match.params
     return (
@@ -18,15 +45,6 @@ class NewDetail extends Component{
       </div>
     )
   }
-  componentDidMount() {
-    setTimeout(() => {
-      this.props.dispatch(action => {
-        action({
-          type: 'update_detail',
-          data: 'update_detail更新了'
-        })
-      })
-    }, 3000)
-  }
+  
 }
 export default connect(state => state.details)(NewDetail)
