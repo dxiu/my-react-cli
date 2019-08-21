@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {
   Switch,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom'
 
 import Home from '../views/home.js'
@@ -14,7 +15,8 @@ export default class RouterIndex extends Component{
       <Switch>
         <Route path="/" exact component={Home}/>
         <Route path="/user" component={User}/>
-        <Route path="/news" component={News}/>
+        {/* /news/newsDetail/3 */}
+        <Route path="/news" component={News} render={() => (<Redirect to="/user"/>)}/>
         <Route path="*" component={Not}/>
       </Switch>
     )
