@@ -38,6 +38,7 @@ export default class User extends Component{
     }
     this.setState({
       url: url
+
     })
   }
   componentDidUpdate() {
