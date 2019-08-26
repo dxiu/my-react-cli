@@ -30,13 +30,12 @@ export default class User extends Component{
     // createObjectURL
     const url = URL.createObjectURL(blob)
     // FileReader
-    // const fileReder = new FileReader()
-    // fileReder.readAsDataURL(blob)
-    // fileReder.onload = (res) => {
-    //   this.setState({
-    //     url: res.target.result
-    //   })
-    // }
+    const fileReder = new FileReader()
+    fileReder.readAsDataURL(blob)
+    fileReder.onload = (res) => {
+      // 图
+     console.log(res)
+    }
     this.setState({
       url: url
     })
