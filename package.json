@@ -1,7 +1,7 @@
 {
   "name": "my-react-cli",
   "version": "0.1.0",
-  "homepage": "https://github.io/dxiu/my-react-cli",
+  "homepage": "https://dxiu.github.io/dxiu/my-react-cli",
   "private": true,
   "dependencies": {
     "antd": "^3.21.1",
