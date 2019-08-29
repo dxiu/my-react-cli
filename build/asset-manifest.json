@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/dxiu/my-react-cli/static/css/main.835f3d3c.chunk.css",
+    "main.js": "/dxiu/my-react-cli/static/js/main.c6a5619e.chunk.js",
+    "main.js.map": "/dxiu/my-react-cli/static/js/main.c6a5619e.chunk.js.map",
+    "runtime~main.js": "/dxiu/my-react-cli/static/js/runtime~main.b2bd8bc5.js",
+    "runtime~main.js.map": "/dxiu/my-react-cli/static/js/runtime~main.b2bd8bc5.js.map",
+    "static/css/2.61b8705f.chunk.css": "/dxiu/my-react-cli/static/css/2.61b8705f.chunk.css",
+    "static/js/2.dc54527e.chunk.js": "/dxiu/my-react-cli/static/js/2.dc54527e.chunk.js",
+    "static/js/2.dc54527e.chunk.js.map": "/dxiu/my-react-cli/static/js/2.dc54527e.chunk.js.map",
+    "index.html": "/dxiu/my-react-cli/index.html",
+    "precache-manifest.b22891c594f07060dd54271266994978.js": "/dxiu/my-react-cli/precache-manifest.b22891c594f07060dd54271266994978.js",
+    "service-worker.js": "/dxiu/my-react-cli/service-worker.js",
+    "static/css/2.61b8705f.chunk.css.map": "/dxiu/my-react-cli/static/css/2.61b8705f.chunk.css.map",
+    "static/css/main.835f3d3c.chunk.css.map": "/dxiu/my-react-cli/static/css/main.835f3d3c.chunk.css.map"
+  }
+}
