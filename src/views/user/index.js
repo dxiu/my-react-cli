@@ -38,8 +38,15 @@ export default class User extends Component{
     }
     this.setState({
       url: url
-
     })
+  }
+  upLoad() {
+    const blob = new Blob(["I scream. You scream. We all scream for ice cream."])
+    console.log(navigator)
+    if (navigator.msSaveOrOpenBlob) {
+      navigator.msSaveOrOpenBlob(blob)
+    }
+    
   }
   componentDidUpdate() {
     
@@ -51,6 +58,7 @@ export default class User extends Component{
         {this.state.am ?(this.state.am+this.state.name):this.state.name}
         <button onClick={this.studyBlob.bind(this)}>blob</button>
         <img src={this.state.url} alt="" />
+        <button onClick={this.upLoad.bind(this)}>测试下载</button>
       </div>
     )
   }

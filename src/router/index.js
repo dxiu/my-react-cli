@@ -5,9 +5,9 @@ import {
   Redirect
 } from 'react-router-dom'
 
-import Home from '../views/home.js'
-import News from '../views/news.js'
-import User from '../views/user.js'
+import Home from '../views/home/index.js'
+import News from '../views/news/index.js'
+import User from '../views/user/index.js'
 import Not from '../views/404.js'
 export default class RouterIndex extends Component{
   render(){

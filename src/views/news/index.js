@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import '../style/news.css'
+import './news.css'
 import {
   BrowserRouter,
   NavLink
 } from 'react-router-dom'
-import NewsRouter from '../router/news'
+import NewsRouter from '../../router/news'
 export default class News extends Component{
   render(){
     const arr = [

@@ -4,7 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 
-import NewsDetail from '../views/newsDetail.js'
+import NewsDetail from '../views/newsDetail/index.js'
 export default class NewsRouter extends Component{
   render(){
 
