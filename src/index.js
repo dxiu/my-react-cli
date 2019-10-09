@@ -6,7 +6,7 @@ import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import 'antd/dist/antd.css'; // antd的css
-import './style/index.css'
+import '@/style/index.css'
 import * as serviceWorker from './serviceWorker';
 import Reducers from './reducers/index'
 const store = createStore(

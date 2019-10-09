@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Button } from "antd";
-// import './home.less';
-import '../../style/home.less';
+import './home.scss';
 class Home extends Component {
   constructor(argument) {
     super(argument)
