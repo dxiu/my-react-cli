@@ -32,7 +32,7 @@ class App extends Component{
   }
   render(){
     return (
-      <div className="App">
+      <div className="app_wrap">
         <div className="top_nav">
           {
             this.state.navArr.map((item,index)=>{

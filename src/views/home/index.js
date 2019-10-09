@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Button } from "antd";
+// import './home.less';
+import '../../style/home.less';
 class Home extends Component {
   constructor(argument) {
     super(argument)
@@ -12,7 +14,7 @@ class Home extends Component {
   }
   render() {
     return(
-      <div>
+      <div className="home_wrap">
         <h2>首页</h2>
         <div className="item_nav">首页item_nav</div>
         <Button type="primary">按钮</Button>

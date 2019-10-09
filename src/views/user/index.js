@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import axios from 'axios'
-// import { upload } from '../api/personData'
+import { upload } from '../../api/personData'
 export default class User extends Component{
   constructor() {
     super()
@@ -46,7 +46,17 @@ export default class User extends Component{
     if (navigator.msSaveOrOpenBlob) {
       navigator.msSaveOrOpenBlob(blob)
     }
-    
+  }
+  uploadSql(e) {
+    const blob = new Blob(e.target.files)
+    const reader = new FileReader()
+    reader.addEventListener('load', function() {
+      console.log(this.result)
+      upload(this.result).then(res => {
+        console.log(res)
+      })
+    })
+    reader.readAsArrayBuffer(blob)
   }
   componentDidUpdate() {
     
@@ -59,6 +69,9 @@ export default class User extends Component{
         <button onClick={this.studyBlob.bind(this)}>blob</button>
         <img src={this.state.url} alt="" />
         <button onClick={this.upLoad.bind(this)}>测试下载</button>
+        <div className="upload_file">
+          <input type="file" onChange={this.uploadSql.bind(this)}/>
+        </div>
       </div>
     )
   }
